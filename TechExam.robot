@@ -34,7 +34,7 @@ Check response if only password is input
     Click button  ${xpath_login_button}
     Element should contain  xpath://*[@id="tab-login"]/form/div[1]/span  This field is required.
 
-Check response if not input but login button was clicked
+Check response if no input was provided but login button was clicked
     Click button  //*[@id="tab-login"]/form/button
     Element should contain  xpath://*[@id="tab-login"]/form/div[1]/span  This field is required.
     Element should contain  xpath://*[@id="tab-login"]/form/div[2]/span  This field is required.
