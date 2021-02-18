@@ -4,11 +4,11 @@ Library         SeleniumLibrary
 Test Setup      Open browser  ${URL}  ${BROWSER}
 Test Teardown   Close browser
 *** Variables ***
-${URL}      https://login.optimyapp.com
-${BROWSER}          chrome
-${xpath_email_textbox}  xpath://*[@id="tab-login"]/form/div[1]/input
-${xpath_password_textbox}  xpath://*[@id="tab-login"]/form/div[2]/input
-${xpath_login_button}  //*[@id="tab-login"]/form/button
+${URL}                      https://login.optimyapp.com
+${BROWSER}                  chrome
+${xpath_email_textbox}      xpath://*[@id="tab-login"]/form/div[1]/input
+${xpath_password_textbox}   xpath://*[@id="tab-login"]/form/div[2]/input
+${xpath_login_button}       //*[@id="tab-login"]/form/button
 *** Test Cases ***
 Check if title is correct
     Title should be  Optimy login
