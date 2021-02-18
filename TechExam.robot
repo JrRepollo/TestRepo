@@ -1,7 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 
-Test Setup      Open browser  ${URL}  ${BROWSER}
+Test Setup      Common test setup
 Test Teardown   Close browser
 *** Variables ***
 ${URL}                      https://login.optimyapp.com
@@ -38,3 +38,9 @@ Check response if not input but login button was clicked
     Click button  //*[@id="tab-login"]/form/button
     Element should contain  xpath://*[@id="tab-login"]/form/div[1]/span  This field is required.
     Element should contain  xpath://*[@id="tab-login"]/form/div[2]/span  This field is required.
+
+*** Keywords ***
+Common test setup
+    Open browser  ${URL}  ${BROWSER}
+    Maximize browser window
+    Sleep  2

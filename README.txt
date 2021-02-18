@@ -39,7 +39,7 @@ While still in the same directory, you can already clone the created repository.
 
 Use the following command:  git clone https://github.com/JrRepollo/TestRepo
 
-Afterwards, the file is already available for testing
+Afterwards, a folder named TestRepo will be created inside the folder containing the robot file and the Readme
 
 TEST EXECUTION
 ===============
