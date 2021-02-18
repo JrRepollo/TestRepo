@@ -17,7 +17,7 @@ ${INVALID_EMAIL}            testemail
 Check if title is correct
     Title should be  Optimy login
 
-Check response if email and password are incorrect
+Check response if email and password are incorrect or not registered
     Input text  ${xpath_email_textbox}  ${VALID_EMAIL}
     Input text  ${xpath_password_textbox}  ${VALID_PASSWORD}
     Click button  ${xpath_login_button}
@@ -29,7 +29,12 @@ Check response if invalid email
     Click button  ${xpath_login_button}
     Element should contain  xpath://*[@for="email" and @class="help-block"]  Please enter a valid email address (e.g.: john.smith@gmail.com).
 
-Check response if only password is input
+Check response if only a valid email was given as an input
+    Input text  ${xpath_email_textbox}   ${VALID_EMAIL}
+    Click button  ${xpath_login_button}
+    Element should contain  xpath://*[@id="tab-login"]/form/div[2]/span  This field is required.
+
+Check response if only a valid password was given as an input
     Input text  ${xpath_password_textbox}   ${VALID_PASSWORD}
     Click button  ${xpath_login_button}
     Element should contain  xpath://*[@id="tab-login"]/form/div[1]/span  This field is required.
